@@ -1,73 +1,78 @@
-<?php
-?>
-
-
 
 <!doctype html>
 <html lang="en">
+
+<?php
+
+?>
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.84.0">
-    <title>Signin Template · Bootstrap v5.0</title>
-
-    <link rel="canonical" href="https://getbootstrap.comexamples/sign-in/">
-
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="manifest" href="assets/img/favicons/manifest.json">
-    <link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
-    <link rel="icon" href="assets/img/favicons/favicon.ico">
-    <meta name="theme-color" content="#7952b3">
-
+    <?php require(__DIR__ . '/head.php'); ?>
 </head>
-<body class="text-center">
 
-<main class="form-signin">
-    <!------ Include the above in your HEAD tag ---------->
+<body>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <img class="mb-2" src="assets/img/medico.jpg">
-            </div>
-            <div class="col-md-6">
-                <h1 class="h3 mb-3 fw-normal">Notificações Covid-19</h1>
+<main>
 
-                <div class="form">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">Email address</label>
-                </div>
-                <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">Password</label>
-                </div>
+    <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
 
-                <div class="checkbox mb-3">
-                    <label>
-                        <input type="checkbox" value="remember-me"> Remember me
-                    </label>
-                </div>
-                <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-                <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
-            </div>
-        </div>
+        <?php require (__DIR__ . '/sidebar.php'); ?>
+
     </div>
 
+    <div class="b-example-divider" style="width: 0.05rem"></div>
+
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 p-3 bg-white" style="width: 1500px;">
+
+            <span class="fs-5 fw-bold pt-2 ps-4">Formulários</span>
+
+        <hr style="border-style: solid;border-width: 2px;border-color: #0d6efd; opacity: unset">
+
+        <?php
+
+        ?>
+
+        <div class="card shadow-lg mt-2"> <!-- Início do Card -->
+            <div class="card-header text-start fw-bold fs-6 bg-white">
+                <div class="text-dark fw-bold fs-5" style="font-size: 20px"><i class="fal fa-clipboard-check me-1 text-primary"></i> Notificações</div>
+            </div>
+
+            <div class="col-sm-3 mt-4 ms-3">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1"><i class="fal fa-search me-1 text-secondary"></i></span>
+                    <input type="text" class="form-control col-3" placeholder="Pesquisar" aria-label="Username" aria-describedby="basic-addon1" style="background-color: #e9ecef">
+                </div>
+            </div>
+
+            <div class="card-body">
+                <table class="table mb-5">
+                    <thead>
+                    <tr class="text-secondary">
+                        <th scope="col">Formulário</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="text-primary fw-bold">Coronavírus</td>
+                        <td>COVID-19</td>
+                        <td class="text-end"><a href="#" tabindex="-1" data-toggle="tooltip" title="Incluir Notificação" aria-disabled="true" role="button" class="btn btn-outline-primary btn-sm rounded-circle disabled"><i class="fa fa-plus"></i></a>
+                            <a href="" tabindex="-1" data-toggle="tooltip" title="Visualizar Notificação" aria-disabled="true" role="button" class="btn btn-outline-primary btn-sm rounded-circle"><i class="fa fa-eye"></i></a>
+                        </td>
+                        <td class="text-end"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+    </div>
 </main>
 
 
+<script src="assets/js/bootstrap.bundle.min.js"></script>
 
+<script src="assets/js/sidebars.js"></script>
 </body>
 </html>
-
