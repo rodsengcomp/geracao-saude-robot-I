@@ -40,7 +40,7 @@
             <div class="col-sm-3 mt-4 ms-3">
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1"><i class="fal fa-search me-1 text-secondary"></i></span>
-                    <input type="text" class="form-control col-3" placeholder="Pesquisar" aria-label="Username" aria-describedby="basic-addon1" style="background-color: #e9ecef">
+                    <input type="text" class="form-control col-3" disabled placeholder="Pesquisar" aria-label="Username" aria-describedby="basic-addon1" style="background-color: #e9ecef">
                 </div>
             </div>
 
@@ -58,8 +58,9 @@
                     <tr>
                         <td class="text-primary fw-bold">Coronavírus</td>
                         <td>COVID-19</td>
-                        <td class="text-end"><a href="#" tabindex="-1" data-toggle="tooltip" title="Incluir Notificação" aria-disabled="true" role="button" class="btn btn-outline-primary btn-sm rounded-circle disabled"><i class="fa fa-plus"></i></a>
-                            <a href="" tabindex="-1" data-toggle="tooltip" title="Visualizar Notificação" aria-disabled="true" role="button" class="btn btn-outline-primary btn-sm rounded-circle"><i class="fa fa-eye"></i></a>
+                        <td class="text-end">
+                            <a href="#" tabindex="-1" data-toggle="tooltip" title="Incluir Notificação" aria-disabled="true" role="button" class="btn btn-outline-primary btn-sm rounded-circle disabled"><i class="fa fa-plus"></i></a>
+                            <a href="lista" tabindex="-1" data-toggle="tooltip" title="Visualizar Notificação" aria-disabled="true" role="button" class="btn btn-outline-primary btn-sm rounded-circle"><i class="fa fa-eye"></i></a>
                         </td>
                         <td class="text-end"></td>
                     </tr>
