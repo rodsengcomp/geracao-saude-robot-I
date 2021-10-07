@@ -47,7 +47,7 @@
         </a>
     </li>
     <li class="nav-item pb-1">
-        <a href="#" class="nav-link ps-1" aria-current="page">
+        <a href="./" class="nav-link ps-1" aria-current="page">
             <div class="text-secondary fs-6 fw-bold"><i class="fal fa-arrow-alt-circle-right me-1 text-secondary" width="18" height="18"></i> Sair</div>
         </a>
     </li>

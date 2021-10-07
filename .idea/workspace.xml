@@ -34,7 +34,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/css" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -44,8 +44,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\geracao-saude-robot-I\assets" />
+      <recent name="C:\xampp\htdocs\geracao-saude-robot-I\assets\css" />
       <recent name="C:\xampp\htdocs\geracao-saude-robot-I" />
+      <recent name="C:\xampp\htdocs\geracao-saude-robot-I\assets" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -59,7 +60,8 @@
       <workItem from="1633315327147" duration="2598000" />
       <workItem from="1633346850971" duration="1880000" />
       <workItem from="1633348834342" duration="17588000" />
-      <workItem from="1633517188624" duration="4299000" />
+      <workItem from="1633517188624" duration="4894000" />
+      <workItem from="1633605498368" duration="8693000" />
     </task>
     <servers />
   </component>

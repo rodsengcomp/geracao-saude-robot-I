@@ -55,61 +55,41 @@
                 <script type="text/javascript">
 
                     $(document).ready(function() {
-                        /*Configurações da Lista de Memorandos*/
-                        $('#list-covid').DataTable({
-                            responsive: {details:
-                                    {display: $.fn.dataTable.Responsive.display.modal(
-                                            {header: function (row)
-                                                {var data = row.data();
-                                                    return 'DETALHES DO ' +data[3]+ '&nbspNº&nbsp:&nbsp'  + data[0];}
-                                            }),
-                                        renderer: function ( api, rowIdx, columns ) {
-                                            var data = $.map( columns, function ( col, i ) {
-                                                return '<tr>'+'<td>'+col.title+':'+'</td> '+'<td>'+col.data+'</td>'+'</tr>';} ).join('');
-                                            return $('<table/>').append( data ); } } },
-                            <?=$button->language()?>,
-                            dom: "lBfrtip",
-                            "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "Todos"]], "aaSorting": [ 0, 'desc' ],
-                            buttons: [ {extend:'excel',title:'$system - $nameform - $get_year',header: '$system - $nameform - $get_year',filename:'$system - $nameform - $get_year',className: 'btn btn-outline-success',text:'$i_excel' },
-                                {extend: 'pdfHtml5',exportOptions: {columns: ':visible'},title:'$system - $nameform - $get_year',header: '$system - $nameform - $get_year',filename:'$system - $nameform - $get_year',orientation: 'landscape',pageSize: 'LEGAL',className: 'btn btn-outline-danger',text:'$i_pdf'},
-                                {extend:'print', exportOptions: {columns: ':visible'},title:'$system - $nameform - $get_year',header: '$system - $nameform - $get_year',filename:'$system - $nameform - $get_year',orientation:'landscape',className: 'btn btn-outline-secondary',text:'$i_print'},
-                                {extend:'colvis',titleAttr: 'Select Colunas',className: 'btn btn-outline-primary',text:'$i_list'} ]
+                        $('#covid').DataTable({
+                            "processing": true,
+                            "serverSide": true,
+                            "ajax": "server/server_processing.php",
+                            "language": {
+                                "sEmptyTable": "Nenhum registro encontrado",
+                                "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros","sInfoEmpty": "Mostrando 0 até 0 de 0 registros","sInfoFiltered": "(Filtrados de _MAX_ registros)",
+                                "sInfoThousands": ".","sLengthMenu": "_MENU_ Resultados por Página","sLoadingRecords": "Carregando...","sProcessing": "Processando...","sZeroRecords": "Nenhum registro encontrado",
+                                "sSearch": "Pesquisar","oPaginate": {"sNext": "Próximo","sPrevious": "Anterior","sFirst": "Primeiro","sLast": "Último"},
+                                "oAria": {"sSortAscending": "Ordenar colunas de forma ascendente","sPrevious": "Ordenar colunas de forma descendente"} },
+                            "aaSorting": [3, 'asc'], /* 'desc' Carregar table decrescente e asc crescente*/
+                            "lengthMenu": [[5, 10, 20, 30, 40, 50, -1], [5, 10, 20 ,30, 40, 50, "Todos"]],
+                            "aoColumnDefs": [
+                                {
+                                    "aTargets": [3], // o numero 6 é o nº da coluna
+                                    "mRender": function (data, type, full) { //aqui é uma funçãozinha para pegar os ids
+                                    return '<a href="edicao?id=' + full[0] + '" role="button" class="btn btn-outline-warning btn-sm rounded-circle text-center"><i class="fa fa-pencil"></i></a>';
+                                    }
+                                }
+                            ]
                         });
                     });
                 </script>
 
-                <table id="list-covid" class="table table-striped table-bordered flex-nowrap border-<?=$btncolorlistsv2?> text-center" style="width:100%">
-                    <thead class="table-<?=$btncolorlistsv2?>">
-                    <tr class="bg-light text-<?php if($btncolorlistsv2 === 'dark'): echo 'white border-white'; else: echo $btncolorlistsv2.' border-'.$btncolorlistsv2; endif;?>">
-                        <th class="text-center">ENTRADA</th>
-                        <th class="text-center">SE</th>
-                        <th class="text-center">PROTOCOLO SV2</th>
-                        <th class="text-center">SINAN</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-                </table>
-
-                <table class="table mb-5">
+                <table id="covid" class="table table-striped table-bordered flex-nowrap border-secondary" style="width:100%">
                     <thead>
-                    <tr class="text-secondary">
-                        <th scope="col">Formulário</th>
-                        <th scope="col">Descrição</th>
-                        <th scope="col"></th>
-                        <th scope="col"></th>
+                    <tr>
+                        <th>Numero Notificação</th>
+                        <th>Nome</th>
+                        <th>Sobremone</th>
+                        <th>Editar</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td class="text-primary fw-bold">Coronavírus</td>
-                        <td>COVID-19</td>
-                        <td class="text-end"><a href="#" tabindex="-1" data-toggle="tooltip" title="Incluir Notificação" aria-disabled="true" role="button" class="btn btn-outline-primary btn-sm rounded-circle disabled"><i class="fa fa-plus"></i></a>
-                            <a href="" tabindex="-1" data-toggle="tooltip" title="Visualizar Notificação" aria-disabled="true" role="button" class="btn btn-outline-primary btn-sm rounded-circle"><i class="fa fa-eye"></i></a>
-                        </td>
-                        <td class="text-end"></td>
-                    </tr>
+
                     </tbody>
                 </table>
             </div>
@@ -120,6 +100,6 @@
 
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 
-<script src="assets/js/sidebars.js"></script>
+<script src="assets/sidebars.js"></script>
 </body>
 </html>
