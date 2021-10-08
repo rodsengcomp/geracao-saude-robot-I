@@ -104,13 +104,13 @@ endif;
                 <div class="row">
                     <div class="col-sm-3">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault1" style="padding: 10px" id="flexRadioDefault1">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault1" style="padding: 10px" id="flexRadioDefault1" checked>
                             <label class="form-check-label text-secondary ms-3 fw-bold" for="flexRadioDefault3">Sim</label>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault2" style="padding: 10px" checked>
+                            <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault2" style="padding: 10px">
                             <label class="form-check-label text-secondary ms-3 fw-bold" for="flexCheckDefaul4">Não</label>
                         </div>
                     </div>

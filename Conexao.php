@@ -20,10 +20,10 @@ $get_year = isset($_GET['ano']) ? $_GET['ano'] : $ano_atual;
 
 class Conexao {
 
-    const HOST = '192.168.15.52';
+    const HOST = '10.47.171.69';
     const DBNAME = 'pi8';
-    const USER = 'covid';
-    const PASSWORD = '12344321';
+    const USER = 'd788796';
+    const PASSWORD = '230814';
     const PAGSYSTEM = 'index';
     const SYSTEM = 'SISDAMWEBNEW';
     const INDEX = 'index';
