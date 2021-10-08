@@ -22,7 +22,7 @@
 
     <div class="b-example-divider" style="width: 0.05rem"></div>
 
-    <div class="d-flex flex-column align-items-stretch flex-shrink-0 p-3 bg-white" style="width: 1500px;">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 p-3 bg-white" style="width: 1000px;">
 
             <span class="fs-5 fw-bold pt-2 ps-4">Formulários</span>
 

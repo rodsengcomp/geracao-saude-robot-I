@@ -22,9 +22,16 @@
 
     <div class="b-example-divider" style="width: 0.05rem"></div>
 
-    <div class="d-flex flex-column align-items-stretch flex-shrink-0 p-3 bg-white" style="width: 1500px;">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 p-3 bg-white" style="width: 1000px;">
 
-        <span class="fw-bold pt-2 ps-4" style="font-size: 18px;font-family: 'Rawline', sans-serif">Notificações</span>
+        <div class="row mt-0">
+            <div class="col-sm-1 mt-0 pe-0">
+                <a class="btn btn-light fw-bold" href="./" role="button" style="background-color: white"><i class="fa fa-arrow-left"></i></a>
+            </div>
+            <div class="col-sm-3 mt-1 ms-0 ps-0">
+                <span class="fw-bold" style="font-size: 18px">Notificações</span>
+            </div>
+        </div>
 
         <hr style="border-style: solid;border-width: 2px;border-color: #0d6efd; opacity: unset">
 
@@ -71,7 +78,14 @@
                                 {
                                     "aTargets": [3], // o numero 6 é o nº da coluna
                                     "mRender": function (data, type, full) { //aqui é uma funçãozinha para pegar os ids
-                                    return '<a href="edicao?id=' + full[0] + '" role="button" class="btn btn-outline-warning btn-sm rounded-circle text-center"><i class="fa fa-pencil"></i></a>';
+                                    return '<button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">' +
+                                            '<span class="visually-hidden">Toggle Dropdown</span></button><ul class="dropdown-menu dropdown-menu-end">' +
+                                            '<li><a class="dropdown-item fw-bold text-primary" style="font-size: 13px" href="./">Encerrar Notificação</a></li><li><hr class="dropdown-divider"></li>' +
+                                            '<li><a class="dropdown-item fw-bold text-primary" style="font-size: 13px" href="edicao?id=' + full[0] + '">Editar Notificação</a></li><li><hr class="dropdown-divider"></li>' +
+                                            '<li><a class="dropdown-item fw-bold text-primary"  style="font-size: 13px" href="./">Cancelar Notificação</a></li><li><hr class="dropdown-divider"></li>' +
+                                            '<li><a class="dropdown-item fw-bold text-primary" style="font-size: 13px" href="./">Visualizar Notificação</a></li><li><hr class="dropdown-divider"></li>' +
+                                            '<li><a class="dropdown-item fw-bold text-primary" style="font-size: 13px" href="./">Imprimir Notificação</a></li>' +
+                                            '</ul>';
                                     }
                                 }
                             ]
@@ -79,7 +93,7 @@
                     });
                 </script>
 
-                <table id="covid" class="table table-striped table-bordered flex-nowrap border-secondary" style="width:100%">
+                <table id="covid" class="table table-striped flex-nowrap border-secondary text-center" style="width:100%">
                     <thead>
                     <tr>
                         <th>Numero Notificação</th>
